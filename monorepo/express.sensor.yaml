@@ -21,6 +21,10 @@ spec:
             value:
               - heads
             type: string
+          - path: body.head_commit.modified
+            value: 
+              - /k8s-resources/trio/dev/*
+            type: string
   triggers:
     - template:
         name: trigger
