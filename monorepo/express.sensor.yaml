@@ -25,7 +25,7 @@ spec:
             comparator: '='
             type: string
             value:
-              - /k8s-resources/trio/dev/*
+              - /k8s-resources/*
   triggers:
     - template:
         name: trigger
