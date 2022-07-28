@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cdp-csdp-july-express
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /webhooks/csdp-july/monorepo
+            backend:
+              service:
+                name: monorepo-eventsource-svc
+                port:
+                  number: 80
+            pathType: Prefix
+      host: rozario-demo.sa.cf-cd.com
