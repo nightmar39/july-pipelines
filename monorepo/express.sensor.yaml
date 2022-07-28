@@ -22,9 +22,10 @@ spec:
               - heads
             type: string
           - path: body.head_commit.modified
-            value: 
-              - /k8s-resources/trio/dev/*
+            comparator: '='
             type: string
+            value:
+              - /k8s-resources/trio/dev/*
   triggers:
     - template:
         name: trigger
