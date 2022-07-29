@@ -2,17 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
   name: argo-hub.ci-simple.0.0.1
-  annotations:
-    argo-hub/version: '0.0.1'
-    argo-hub/description: 'This Workflow Template is used to create your first CI pipeline in CSDP'
-    argo-hub/categories: 'starter template'
-    argo-hub/license: 'MIT'
-    argo-hub/owner_name: 'Eti Zaguri'
-    argo-hub/owner_email: 'eti.zaguri@codefresh.io'
-    argo-hub/owner_avatar: 'https://avatars.githubusercontent.com/u/85868206'
-    argo-hub/owner_url: 'https://github.com/eti-codefresh'
-    argo-hub/icon_url: "https://cdn.jsdelivr.net/gh/codefresh-io/argo-hub@main/examples/ci-simple/assets/icon.svg"
-    argo-hub/icon-background: "#004C76"
 spec:
   volumes:
     - name: docker-config
@@ -24,11 +13,6 @@ spec:
   entrypoint: ci-tasks
   templates:
     - name: ci-tasks
-      metadata:
-        annotations:
-          argo-hub-template/description: 'Builds a docker image using Kaniko, uploads image metadata to CSDP, and tests the image'
-          argo-hub-template/icon_url: "https://cdn.jsdelivr.net/gh/codefresh-io/argo-hub@main/workflows/ci-simple/assets/icon.svg"
-          argo-hub-template/icon_background: "#004C76"
       inputs:
         parameters:
           - name: GIT_REPO_URL
