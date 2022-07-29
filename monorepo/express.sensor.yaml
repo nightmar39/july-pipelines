@@ -41,4 +41,12 @@ spec:
               spec:
                 workflowTemplateRef:
                   name: argo-hub.ci-simple.0.0.1
-          parameters: []
+                arguments:
+                  parameters:
+                    - name: IMAGE
+                      value: ''
+          parameters:
+            - dest: spec.arguments.parameters.0.value
+              src:
+                dependencyName: github-5f570c68-99c2-454f-b1ed-ea6b79c440fd
+                dataTemplate: placeholder
