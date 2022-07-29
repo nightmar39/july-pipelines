@@ -9,7 +9,8 @@ spec:
       inputs:
         parameters:
           - name: IMAGE
+          - name: FILES_CHANGED
       container:
-        image: '{{ inputs.parameters.IMAGE }}'
+        image: '{{ inputs.parameters.IMAGE}}'
         command: [sh, -c]
-        args: ["ls"]
+        args: ["echo '{{ inputs.parameters.FILES_CHANGED }}'"]
