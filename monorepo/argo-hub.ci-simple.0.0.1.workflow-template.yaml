@@ -12,6 +12,7 @@ spec:
         secretName: '{{ inputs.parameters.DOCKER_CONFIG_SECRET }}'
   entrypoint: ci-tasks
   templates:
+     # Test template
     - name: test
       inputs:
         parameters:
